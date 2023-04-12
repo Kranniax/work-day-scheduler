@@ -1,2 +1,10 @@
+var currentDay = moment();
+var currentHour = currentDay.hour();
 var currenDayEl = $("#currentDay");
-currenDayEl.text(moment().format("dddd, MMMM Do"));
+
+// display current day and time.
+currenDayEl.text(currentDay.format("dddd, MMMM Do YYYY"));
+
+
+
+
