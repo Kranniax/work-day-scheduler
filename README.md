@@ -16,7 +16,7 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Deployed Website
 
-<>
+<https://kranniax.github.io/work-day-scheduler/>
 
 ## Contributions
 
@@ -24,7 +24,7 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Project Status
 
-Project is: _in progress_
+Project is: _completed_
 
 ## Contact
 
