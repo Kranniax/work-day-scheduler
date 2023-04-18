@@ -1,7 +1,7 @@
 var currentDay = moment();
 var currentHour = currentDay.hour();
 var currenDayEl = $("#currentDay");
-console.log(currentHour);
+
 // display current day and time.
 currenDayEl.text(currentDay.format("dddd, MMMM Do YYYY"));
 
@@ -23,4 +23,20 @@ var timeBlockUpdate = function () {
   });
 };
 
+$(".saveBtn").on("click", function (){
+
+  // grab event description from textarea.
+  var eventDescription = $(this).siblings(".description");
+  console.log(eventDescription);
+  // get time-block id for this description.
+  // save information to local storage.  
+});
+
 timeBlockUpdate();
+
+// check time blocks frequently againt current hour.
+
+
+
+// load saved time block events.
+
