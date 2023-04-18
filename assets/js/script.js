@@ -23,20 +23,29 @@ var timeBlockUpdate = function () {
   });
 };
 
-$(".saveBtn").on("click", function (){
-
+$(".saveBtn").on("click", function () {
   // grab event description from textarea.
-  var eventDescription = $(this).siblings(".description");
-  console.log(eventDescription);
+  var eventDescription = $(this).siblings(".description").val();
+
   // get time-block id for this description.
-  // save information to local storage.  
+  var eventTimeBlock = $(this).parent().attr("id");
+
+  // save information to local storage.
+  localStorage.setItem(eventTimeBlock, eventDescription);
 });
 
 timeBlockUpdate();
 
 // check time blocks frequently againt current hour.
-
-
+setInterval(timeBlockUpdate, 30000);
 
 // load saved time block events.
-
+$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+$("#hour-10 .description").val(localStorage.getItem("hour-10"));
+$("#hour-11 .description").val(localStorage.getItem("hour-11"));
+$("#hour-12 .description").val(localStorage.getItem("hour-12"));
+$("#hour-13 .description").val(localStorage.getItem("hour-13"));
+$("#hour-14 .description").val(localStorage.getItem("hour-14"));
+$("#hour-15 .description").val(localStorage.getItem("hour-15"));
+$("#hour-16 .description").val(localStorage.getItem("hour-16"));
+$("#hour-17 .description").val(localStorage.getItem("hour-17"));
